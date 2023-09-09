@@ -14,6 +14,10 @@ export default function App(props: AppProps) {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
         <meta name="description" content="Pig Farm Simulation." />
+        <meta
+          http-equiv="Content-Security-Policy"
+          content="upgrade-insecure-requests"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
