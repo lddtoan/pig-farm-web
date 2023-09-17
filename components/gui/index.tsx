@@ -22,9 +22,7 @@ export const Display = ({ cycle, name }: DisplayProps) => {
       }}
     >
       <Image
-        src={`${
-          process.env.NEXT_PUBLIC_PIG_FARM_SERVICE_URL
-        }/gui?file=${simulation.name?.toLowerCase()}/${
+        src={`/api/gui?file=${simulation.name?.toLowerCase()}/${
           simulation.id
         }-${name}-${cycle}.png`}
         alt={name}
@@ -47,7 +45,7 @@ export const GUI = () => {
       const interval = setInterval(async () => {
         try {
           await instance.get(
-            `/gui?file=${simulation.name?.toLowerCase()}/${
+            `/api/gui?file=${simulation.name?.toLowerCase()}/${
               simulation.id
             }-simulator-${cycle + 45}.png`
           );
