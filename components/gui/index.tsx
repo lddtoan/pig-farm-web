@@ -45,7 +45,7 @@ export const GUI = () => {
       const interval = setInterval(async () => {
         try {
           await instance.get(
-            `/api/gui?file=${simulation.name?.toLowerCase()}/${
+            `/gui?file=${simulation.name?.toLowerCase()}/${
               simulation.id
             }-simulator-${cycle + 45}.png`
           );
