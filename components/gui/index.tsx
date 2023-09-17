@@ -22,7 +22,9 @@ export const Display = ({ cycle, name }: DisplayProps) => {
       }}
     >
       <Image
-        src={`/api/gui?file=${simulation.name?.toLowerCase()}/${
+        src={`${
+          process.env.NEXT_PUBLIC_PIG_FARM_SERVICE_URL
+        }/gui?file=${simulation.name?.toLowerCase()}/${
           simulation.id
         }-${name}-${cycle}.png`}
         alt={name}
